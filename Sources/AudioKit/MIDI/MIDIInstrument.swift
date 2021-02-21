@@ -104,7 +104,7 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     ///   - portID:     MIDI Unique Port ID
     ///   - offset:     the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDIController(_ controller: MIDIByte,
+    open func receivedMIDIController(_ controller: MIDIByte,
                                        value: MIDIByte, channel: MIDIChannel,
                                        portID: MIDIUniqueID?,
                                        offset: MIDITimeStamp) {
@@ -120,7 +120,7 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     ///   - portID:     MIDI Unique Port ID
     ///   - offset:     the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDIAftertouch(noteNumber: MIDINoteNumber,
+    open func receivedMIDIAftertouch(noteNumber: MIDINoteNumber,
                                        pressure: MIDIByte,
                                        channel: MIDIChannel,
                                        portID: MIDIUniqueID?,
@@ -136,7 +136,7 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     ///   - portID:   MIDI Unique Port ID
     ///   - offset:   the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDIAftertouch(_ pressure: MIDIByte,
+    open func receivedMIDIAftertouch(_ pressure: MIDIByte,
                                        channel: MIDIChannel,
                                        portID: MIDIUniqueID?,
                                        offset: MIDITimeStamp) {
@@ -151,7 +151,7 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     ///   - portID:          MIDI Unique Port ID
     ///   - offset:          the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord,
+    open func receivedMIDIPitchWheel(_ pitchWheelValue: MIDIWord,
                                        channel: MIDIChannel,
                                        portID: MIDIUniqueID?,
                                        offset: MIDITimeStamp) {
@@ -166,7 +166,7 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     ///   - portID:   MIDI Unique Port ID
     ///   - offset:   the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDIProgramChange(_ program: MIDIByte,
+    open func receivedMIDIProgramChange(_ program: MIDIByte,
                                           channel: MIDIChannel,
                                           portID: MIDIUniqueID?,
                                           offset: MIDITimeStamp) {
@@ -179,24 +179,24 @@ open class MIDIInstrument: PolyphonicNode, MIDIListener, NamedNode {
     /// - portID:     MIDI Unique Port ID
     /// - offset:     the offset in samples that this event occurs in the buffer
     ///
-    public func receivedMIDISystemCommand(_ data: [MIDIByte],
+    open func receivedMIDISystemCommand(_ data: [MIDIByte],
                                           portID: MIDIUniqueID?,
                                           offset: MIDITimeStamp) {
         // Do nothing
     }
 
     /// MIDI Setup has changed
-    public func receivedMIDISetupChange() {
+    open func receivedMIDISetupChange() {
         // Do nothing
     }
 
     /// MIDI Object Property has changed
-    public func receivedMIDIPropertyChange(propertyChangeInfo: MIDIObjectPropertyChangeNotification) {
+    open func receivedMIDIPropertyChange(propertyChangeInfo: MIDIObjectPropertyChangeNotification) {
         // Do nothing
     }
 
     /// Generic MIDI Notification
-    public func receivedMIDINotification(notification: MIDINotification) {
+    open func receivedMIDINotification(notification: MIDINotification) {
         // Do nothing
     }
 
