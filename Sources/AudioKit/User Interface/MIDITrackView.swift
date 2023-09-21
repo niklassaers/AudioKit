@@ -95,7 +95,7 @@ public class MIDITrackView: UIView {
             sequencer.setTempo(self.sequencer.allTempoEvents[0].1)
             previousTempo = self.sequencer.allTempoEvents[0].1
             let tempo = self.sequencer.allTempoEvents[0].1
-            cursorTimer = Timer.scheduledTimer(timeInterval: (1.0 / ((20 + (8.0 / 10.0) + (1.0 / 30.0)))) *
+            cursorTimer = Timer.scheduledTimer(timeInterval: 0.0480000000768 *
                                                (1.0 / tempo) * 60.0,
             target: self,
             selector: #selector(self.updateCursor),
